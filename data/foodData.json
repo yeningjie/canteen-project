@@ -1,0 +1,7 @@
+[
+    {"name":"番茄炒蛋","window":1,"type":"veg","price":6},
+    {"name":"水煮鱼","window":2,"type":"meat","price":14},
+    {"name":"炒青菜","window":2,"type":"veg","price":4},
+    {"name":"土豆炖牛肉","window":3,"type":"meat","price":13},
+    {"name":"凉拌黄瓜","window":3,"type":"veg","price":5}
+]
