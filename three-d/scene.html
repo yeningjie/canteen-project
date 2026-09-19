@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三维食堂场景</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+    <div style="margin:12px;">
+        <a href=" " style="padding:8px 16px;background:#0d6efd;color:#fff;border-radius:4px;text-decoration:none;">← 返回食堂首页</a >
+    </div>
+    <a-scene>
+        <a-sky color="#87ceeb"></a-sky>
+        <a-plane rotation="-90 0 0" width="30" height="30" color="#999999"></a-plane>
+        <a-box position="-4 1.5 -6" depth="2" width="3" height="3" color="#ffbc42">
+            <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="15000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box position="0 1.5 -6" depth="2" width="3" height="3" color="#42a5f5"></a-box>
+        <a-box position="4 1.5 -6" depth="2" width="3" height="3" color="#66bb6a"></a-box>
+    </a-scene>
+</body>
+</html>
