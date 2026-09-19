@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园公共信息与数据展示中心 - 食堂看板</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-light mb-4">
+    <div class="container">
+        <a class="navbar-brand" href=" ">校园食堂看板</a >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html#home">首页</a ></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#food">菜品查询</a ></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#stat">客流统计</a ></li>
+                <li class="nav-item"><a class="nav-link" href="three-d/scene.html">三维食堂</a ></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="home" class="mb-5">
+        <h2>欢迎使用校园食堂信息看板</h2>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <a href="#food" style="text-decoration:none;color:inherit;">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">菜品查询</h5>
+                            <p class="card-text">按窗口、菜品类型筛选食堂菜品</p >
+                        </div>
+                    </div>
+                </a >
+            </div>
+            <div class="col-md-4">
+                <a href="#stat" style="text-decoration:none;color:inherit;">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">客流统计</h5>
+                            <p class="card-text">查看就餐客流与菜品占比图表</p >
+                        </div>
+                    </div>
+                </a >
+            </div>
+            <div class="col-md-4">
+                <a href="three-d/scene.html" style="text-decoration:none;color:inherit;">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">三维食堂</h5>
+                            <p class="card-text">三维食堂场景漫游查看</p >
+                        </div>
+                    </div>
+                </a >
+            </div>
+        </div>
+    </section>
+
+    <section id="food" class="mb-5">
+        <h2>食堂菜品查询</h2>
+        <div id="foodBox">
+            <div class="row g-3 mb-3">
+                <div class="col-auto">
+                    <label>食堂窗口：</label>
+                    <select id="windowSelect" class="form-select">
+                        <option value="all">全部窗口</option>
+                        <option value="1">一号窗口</option>
+                        <option value="2">二号窗口</option>
+                        <option value="3">三号窗口</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label>菜品类型：</label>
+                    <select id="typeSelect" class="form-select">
+                        <option value="all">全部类型</option>
+                        <option value="meat">荤菜</option>
+                        <option value="veg">素菜</option>
+                    </select>
+                </div>
+            </div>
+            <div id="foodList" class="row"></div>
+        </div>
+    </section>
+
+    <section id="stat" class="mb-5">
+        <h2>食堂就餐数据统计</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div style="height:350px">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div style="height:350px">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
